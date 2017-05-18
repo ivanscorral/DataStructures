@@ -11,11 +11,20 @@ public class Stack {
 	}
 	
 	public void push(int value){
-		this.array[++top] = value;
+		if(!isFull()){
+			this.array[++top] = value;
+		}else{
+			System.out.println("Stack is full, can't add more elements");
+		}
 	}
 	
 	public int pop(){
-		return this.array[top--];
+		if(!isEmpty()){
+			return this.array[top--];
+		}else{
+			System.out.println("Stack is empty, nothing to pop");
+			return -1;
+		}
 	}
 	
 	public boolean isEmpty(){

@@ -11,18 +11,11 @@ public class Stack {
 	}
 	
 	public void push(int value){
-		this.array[top++] = value;
+		this.array[++top] = value;
 	}
-	
 	
 	public int pop(){
 		return this.array[top--];
-	}
-	
-	public void show(){
-		for(int i = 0; i < top; i++){
-			System.out.println(array[i]);
-		}
 	}
 	
 	public boolean isEmpty(){
@@ -33,7 +26,7 @@ public class Stack {
 		return (top == array.length - 1);
 	}
 	
-	public int getSize(){
-		return top;
+	public int peek(){
+		return this.array[top];
 	}
 }

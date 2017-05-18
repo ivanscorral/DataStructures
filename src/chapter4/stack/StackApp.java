@@ -9,10 +9,10 @@ public class StackApp {
 		s.push(62);
 		s.push(84);
 		
-		System.out.println(s.pop());
-		System.out.println(s.pop());
-		s.push(5);
-		System.out.println(s.pop());
+		while(!s.isEmpty()){
+			System.out.print(s.pop());
+			System.out.print(" ");
+		}
 	}
 
 }
